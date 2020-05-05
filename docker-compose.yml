@@ -16,13 +16,11 @@ services:
       - ms
 
   bookingmicroservice:
-    image: sibby91/bookingmicroservice:dev
+    image: sibby91/bookingmicroservice
     ports:
-      - "5104:80"
+      - 81
     environment: 
       - SERVICE_PORTS=80
-    extra_hosts: 
-      - "bookingmicroservice:10.0.81.1"
     deploy:
      replicas: 2
      update_config:
